@@ -11,15 +11,22 @@ public class Account {
 
 	private String firstName;
 	private String secondName;
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id //@GeneratedValue(strategy = GenerationType.AUTO)
 	private String accountNumber;
 
+	public Account() {}
+	
 	public Account(String firstName, String secondName, String accountNumber) {
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.accountNumber = accountNumber;
 	}
 
+	public String toString()
+	{
+		return firstName + " " + secondName + " " + accountNumber;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
